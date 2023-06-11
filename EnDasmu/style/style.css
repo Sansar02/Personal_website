@@ -1,0 +1,691 @@
+/* ~~~~~~~~~~~~~~~~~ GOOGLE ROBOTO FONT ~~~~~~~~~~~~~~~~~ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+/* ~~~~~~~~~~~~~~~~~ VARIABLES ~~~~~~~~~~~~~~~~~ */
+:root{
+    --bg-color: #1E1E1E;
+    --white-100: #ffffffe8;
+    --white-50: #b8b8b8de;
+    --black: #000000de;
+    --nav-bg: rgba(255, 255, 255, 0.216);
+    --artist-bg: #2D2D2D;
+    --red: #B12530;
+    
+    --linear-gradient1: #F7CE53;
+    --linear-gradient2: #96C475;
+
+    --font-weight-light: 200;
+    --font-weight-regular: 300;
+    --font-weight-semi: 500;
+    --font-weight-bold: 700;
+    --font-weight-lightbold: 900;
+
+    --logo-font: 1.30rem;
+    --footer-font: 1.15rem;
+    
+    --z-index-first: 5;
+    --z-index-second: 4;
+    --z-index-third: 3;
+}
+
+/* ~~~~~~~~~~~~~~~~~ BASIC CSS ~~~~~~~~~~~~~~~~~ */
+*,
+*::before,
+*::after{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style: none;
+}
+
+a,
+img,
+span,
+button{
+    display: block;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+p{
+    font-size: 1rem;
+    color: var(--white-50);
+    font-weight: var(--font-semi-bold);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg-color);
+    color: var(--white-100);
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.homesection{
+    padding-block: 5rem 2rem;
+}
+
+.section {
+    padding-block: 5rem 2rem;
+}
+
+main {
+    overflow: hidden; /* For animation ScrollReveal */
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 45px;
+    background: linear-gradient(to right,var(--linear-gradient1), var(--linear-gradient2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.20;
+    letter-spacing: 2px;
+    margin-block: 0 1.50rem;
+    font-weight: var(--font-weight-bold);
+}
+
+h2{
+    font-size: 1.90rem;
+    font-weight: var(--font-semi-bold);
+}
+
+h3{
+    font-weight: var(--font-semi-bold);
+    font-size: 1.30rem;
+}
+
+h4{
+    font-weight: var(--font-weight-regular);
+    font-size: 1rem;
+}
+
+h5{
+    font-weight: var(--font-weight-semi);
+    font-size: 1.10rem;
+}
+
+span{
+    color: var(--linear-gradient1);
+}
+
+.first_title{
+    color: var(--linear-gradient2);
+    /* margin-block: 0 1rem; */
+}
+
+.second_title{
+    line-height: 1.20;
+    margin-block: 1rem .40rem;
+}
+
+/* sticky  */
+.sticky{
+    background: #191a1981;
+    backdrop-filter: blur(10px);
+    transition: all .3s ease;
+    box-shadow: 0 1px 20px #191a1981;
+}
+/* ~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~ */
+#header{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: var(--z-index-first);
+    padding-block: .60rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    font-size: var(--logo-font);
+}
+
+@media screen and (max-width: 834px){
+    .all_list{
+        position: fixed;
+        right: -100%;
+        top: 0%;
+        background: #393646;
+        height: 100vh;
+        width: 250px;
+        padding: 6rem 0 0 2rem;
+        transition: right .4s;
+        z-index: var(--z-index-first);
+    }
+
+    .ul_item{
+        margin-bottom: 1.50rem;
+    }
+
+    
+.links{
+    letter-spacing: 1px;
+    font-size: .87rem;
+    transition: color .3s ease;
+}
+
+.links:hover{
+    color: var(--white-50);
+}
+
+    /* adding navlist when yoo click on nav icon */
+    .show{
+        right: 0%;
+    }
+
+    /* body over flow hidden when you open navlist */
+    .disable{
+        overflow: hidden;
+    }
+
+    .homesection{
+        padding-block: 7rem 0rem;
+    }
+
+    .section {
+        padding-block: 3rem 2rem;
+    }
+}
+
+.ul_list{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* icons  */
+.icons_item{
+    display: flex;
+    align-items: center;    
+}
+
+/* #moon{
+    padding-right: 1rem;
+    cursor: pointer;
+    font-size: 1.50rem;
+    transition: all .3s ease;
+} */
+
+#menu{
+    font-size: 1.70rem;
+    cursor: pointer;
+}
+
+#colse{
+    position: absolute;
+    top: 2%;
+    right: 9%;
+    font-size: 1.80rem;
+    cursor: pointer;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~~ */
+.img_div{
+    justify-self: center;
+}
+
+#home_main_img{
+    height: 340px;
+    width: auto;
+}
+
+.home_btn{
+    margin-block: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.two_btns{
+    font-size: 1rem;
+}
+
+.btns{
+    margin-right: 2rem;
+    background: linear-gradient(to right,var(--linear-gradient1), var(--linear-gradient2));
+    padding: 10px 35px;
+    color: var(--black);
+    border-radius: 40px;
+    transition: transform .3s ease;
+}
+
+.btns:hover{
+    transform: translateY(-3px);
+}
+
+.learn_more_btn{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+.line{
+    margin-left: 1rem;
+    width: 40px;
+    height: 2px;
+    background-color: var(--white-100);
+}
+
+.arrow{
+    font-size: 1.60rem;
+    position: absolute;
+    right: -6%;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~ COMPLETED PROJECT ~~~~~~~~~~~~~~~~~ */
+.project_text{
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+}
+
+.project_text div{
+    text-align: center;
+}
+
+.project_text div h2{
+    display: flex;
+    align-items: center;
+}
+
+.team_img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.image_item{
+    display: flex;
+}
+
+.project_item{
+    justify-items: center;
+    gap: 1rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~ RENDING POPULAR ITEM ~~~~~~~~~~~~~~~~~ */
+.see_all{
+    margin-top: .60rem;
+}
+
+.popular_item{
+    margin-top: 1rem;
+    gap: 2rem;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.popular_item_box{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px 3rem 0px; 
+    overflow: hidden;
+    transition: transform .3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.popular_item_box:hover{
+    transform: rotate(-5deg);
+}
+
+.artist_img{
+    object-fit: cover;
+    height: 200px;
+    width: auto;
+    transition: transform .3s ease;
+}
+.popular_item_box:hover .artist_img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.artist_box1{
+    background: linear-gradient(to left top, #F7CE53, #96C475);
+}
+
+.artist_box2{
+    background: linear-gradient(to left top, #354231, #2B493F);
+}
+
+.artist_box3{
+    background: linear-gradient(to left top, #4B3631, #5A5750);
+}
+
+.artist_box4{
+    background: linear-gradient(to left top, #49392C, #453A30);
+}
+
+/* ~~~~~~~~~~~~~~~~~ TOP LIST ARTIST ~~~~~~~~~~~~~~~~~ */
+.two_artist_boxs {
+    margin-top: 3rem;
+}
+
+.top_artist_list{
+    background: var(--artist-bg);
+    border-radius: 30px;
+    text-align: center;
+    flex-direction: column;
+    gap: initial;
+    grid-template-columns: 300px;
+    margin: 0 auto;
+}
+
+.img_profile{
+    justify-self: center;
+    transform: translateY(-20px);
+}
+
+.artist_text{
+    line-height: 1.1;
+}
+
+.artist_main_profile{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.quotes{
+    color: var(--red);
+}
+
+.last_artist{
+    margin-top: 1rem;
+}
+
+.last_main_img{
+    border-radius: 30px;
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    background-position: center ;
+}
+
+/* ~~~~~~~~~~~~~~~~~ TOP LIST ARTIST ~~~~~~~~~~~~~~~~~ */
+.sponser_box{
+    gap: 3rem;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+/* ~~~~~~~~~~~~~~~~~ SUBSCRIBE ~~~~~~~~~~~~~~~~~ */
+.sub{
+    font-weight: var(--font-weight-semi);
+    font-size: 2.20rem;
+    line-height: 1.30;
+    letter-spacing: 2PX;
+}
+
+/* ~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~ */
+.footer_title{
+    font-size: var(--footer-font);
+    margin-block: 0 1rem;
+    font-weight: var(--font-weight-semi);
+}
+
+.social_icons .icons{
+    font-size: 1.40rem;
+    color: var(--white-50);
+    transition: color .3s ease;
+    margin-inline: 0 10px;
+}
+
+.social_icons .icons:hover{
+    color: var(--white-100);
+    cursor: pointer;
+}
+
+.footer_linkes{
+    font-size: .95rem;
+    color: var(--white-50);
+    line-height: 1.9;
+    transition: .3s ease;
+}
+
+.footer_linkes:hover{
+    padding-left: 5px;
+}
+
+.four_footer_title{
+    grid-template-columns: repeat(2,1fr);
+}
+
+/* ~~~~~~~~~~~~~~~~~ HORIZONTAL LINE ~~~~~~~~~~~~~~~~~ */
+.horizontal_line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--white-50);
+}
+
+/* ~~~~~~~~~~~~~~~~~ COPYRIGHT ~~~~~~~~~~~~~~~~~ */
+
+.copyright {
+    padding-block: 1rem;
+}
+
+.copyright p{
+    display: flex;
+}
+
+.copyright p span{
+    margin-inline: 5px;
+    font-weight: var(--font-weight-semi);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~ FULL SCREEN ~~~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 552px) {
+    .container{
+        margin-inline: rem;
+    }
+}
+
+@media screen and (min-width: 556px) {
+    .four_footer_title {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .sub {
+        width: 80%;
+    }
+    .sponser_box {
+        gap: 3rem;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+    }
+    p {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 834px) {
+    .ul_list{
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+    
+    .all_list{
+        margin-left: auto;
+        width: inherit;
+    }
+
+    #menu{
+        display: none;
+    }
+    
+    #colse{
+        display: none;
+    }
+
+    .homesection{
+        padding-block: 8rem 2rem;
+    }
+    
+    .section {
+        padding-block: 5rem 2rem;
+    }
+    .home {
+        gap: 1.5rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .img_div {
+        justify-self: center;
+        order: 1;
+    }
+    p {
+        width: 80%;
+    }
+    .popular_item {
+        margin-top: 2rem;
+        gap: 3rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .two_artist_boxs{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .two_artist_boxs {
+        margin-top: 5rem;
+    }
+    .sponser_box {
+        gap: 3rem;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .four_footer_title {
+        grid-template-columns: repeat(4,1fr);
+    }
+    .sponser_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        grid-template-columns: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .homesection{
+        padding-block: 9rem 2rem;
+    }
+    .home_btn {
+        margin-block: 2rem 0;
+    }
+    
+    .section {
+        padding-block: 5rem 2rem;
+    }
+
+    h1{
+        font-size: 70px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 22px;
+    }
+
+    h5{
+        font-size: 1.10rem;
+    }
+    p {
+        width: 100%;
+    }
+    .links {
+        font-size: .85rem;
+    }
+    #home_main_img {
+        height: 500px;
+        width: auto;
+    }
+
+    .home{
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .complet_project {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .project_text {
+        grid-column-gap: 5rem;
+    }
+
+    .team_img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .popular{
+        gap: 2rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .popular_item {
+        margin-top: 1rem;
+        gap: 2rem;
+        flex-direction: column;
+        justify-self: center;
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .container{
+        margin-inline: auto;
+    }
+}
